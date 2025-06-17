@@ -5,10 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arbeidsmarkt en Advocatuur</title>
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
     body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; color: #333; }
     header { background-color: #003366; color: white; padding: 2rem; text-align: center; }
     nav { background:#eee; padding:1rem; text-align:center; }
-    nav a { margin:0 1rem; color:#003366; text-decoration:none; font-weight:bold; }
+    nav a {
+      margin:0 1rem;
+      color:#003366;
+      text-decoration:none;
+      font-weight:bold;
+      opacity: 0;
+      animation: fadeInLink 0.8s forwards;
+    }
+    nav a:hover {
+      color: #0055a5;
+    }
+    @keyframes fadeInLink {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
     section { padding:2rem; max-width:900px; margin:auto; opacity:0; transform:translateY(20px); transition:opacity 0.6s ease-out, transform 0.6s ease-out; }
     section.visible { opacity:1; transform:translateY(0); }
     h2 { color:#003366; margin-top:2rem; }
@@ -26,11 +43,12 @@
     <h1>Praktische Opdracht: Arbeidsmarkt & Advocatuur</h1>
     <p>Door: [Jouw Naam]</p>
   </header>
+
   <nav>
-    <a href="#algemeen">Algemeen</a>
-    <a href="#advocaat">Advocatuur</a>
-    <a href="#toekomst">Toekomst</a>
-    <a href="#methodologie">Methodologie</a>
+    <a href="#algemeen" style="animation-delay: 0.2s;">Algemeen</a>
+    <a href="#advocaat" style="animation-delay: 0.4s;">Advocatuur</a>
+    <a href="#toekomst" style="animation-delay: 0.6s;">Toekomst</a>
+    <a href="#methodologie" style="animation-delay: 0.8s;">Methodologie</a>
   </nav>
 
   <section id="algemeen">
@@ -44,10 +62,8 @@
       <li><strong>Migratie:</strong> Toename arbeidsmigranten uit EU-landen en daarbuiten.</li>
       <li><strong>Vrouwenparticipatie:</strong> 55–65-jarige vrouwen van 49% (2013) naar 69% (2024)<sup>[3]</sup>.</li>
     </ul>
-
     <h3>Participatiegraad</h3>
     <p>De netto participatiegraad (mensen die daadwerkelijk werken) is 72,9% (Q1 2025), een stijging van 0,2% t.o.v. vorig jaar<sup>[4]</sup>. De toename komt vooral door vrouwen en deeltijders.</p>
-
     <h3>Werkloosheid en vacatures</h3>
     <p>Werkloosheid is 3,8% (390.000 personen), iets hoger dan halverwege 2024<sup>[4]</sup>. Tegelijk waren er 310.000 vacatures in Q4 2024, meer vacatures dan werklozen<sup>[2]</sup>. Dit maakt de markt <strong>zeer krap</strong>.</p>
     <ul>
@@ -65,53 +81,46 @@
       <li><strong>1.081 nieuwe beëdigingen</strong> in 2024<sup>[6]</sup>.</li>
       <li><strong>5.490 kantoren</strong>, 17% solo-kantoren<sup>[6]</sup>.</li>
     </ul>
-
     <h3>Scholing en Beroepsopleiding</h3>
     <ul>
       <li>WO-bachelor & master Rechtsgeleerdheid (6 jaar).</li>
       <li>Stage advocaat-stagiair (ca. 3 jaar).</li>
       <li>Beroepsopleiding Advocaten (2 jaar, verplichte vervolgopleiding).</li>
     </ul>
-
     <h3>Salaris en arbeidsvoorwaarden</h3>
-    <p>Geen landelijke cao, salarissen per kantoor:</p>
     <ul>
       <li>Beginnende advocaat topkantoren: €4.700–5.000 p.m.<sup>[9]</sup>.</li>
       <li>Ervaren advocaat: €8.000–10.800 p.m.<sup>[9]</sup>.</li>
       <li>Sociale advocatuur: ~€6.907 p.m. volgens puntensysteem<sup>[10]</sup>.</li>
     </ul>
-
     <h3>Flexibilisering en organisatie</h3>
-    <p>Veel zzp’ers en freelance juristen nemen projecten aan. Thuiswerken is breed geaccepteerd. Organisatiegraad is laag, alleen verplichte Orde-lidmaatschap<sup>[11]</sup>.</p>
+    <p>Veel zzp’ers en freelance juristen; thuiswerken is gebruikelijk. Organisatiegraad is laag, alleen verplichte Orde-lidmaatschap<sup>[11]</sup>.</p>
     <div class="placeholder">[Afbeelding: Advocatenkantoor]</div>
   </section>
 
   <section id="toekomst">
     <h2>3. Verwachte situatie over 5 jaar</h2>
-    <p>Op basis van UWV-prognoses en trends:</p>
     <ul>
       <li><strong>Tekort blijft:</strong> Vergrijzing en vervangingsvraag handhaven krapte<sup>[7]</sup>.</li>
       <li><strong>Digitalisering:</strong> Legal tech vereenvoudigt routinetaken maar versterkt vraag naar specialisten.</li>
       <li><strong>Marktconcurrentie:</strong> Toenemende aanbod door ~1.000 nieuwe advocaten per jaar<sup>[6]</sup>.</li>
     </ul>
     <div class="stat">
-      <strong>Kansrijke arbeidsmarkt</strong> voor juristen, maar selectie op specialisatie en soft skills wordt belangrijker.
+      <strong>Kansrijke arbeidsmarkt</strong> voor juristen, selectie op specialisatie wordt belangrijker.
     </div>
-    <p>Specialisaties als IT-recht, ondernemingsrecht en duurzaamheidrecht zullen naar verwachting het sterkst groeien.</p>
     <div class="placeholder">[Illustratie: Toekomst van de advocatuur]</div>
   </section>
 
   <section id="methodologie">
     <h2>4. Methodologie</h2>
-    <p>Bronnen en werkwijze:</p>
     <ul>
-      <li>Data CBS (arbeidsmarktstatistieken).</li>
-      <li>UWV-rapporten (kansrijke beroepen & prognoses).</li>
-      <li>Orde van Advocaten (leden en instroom).</li>
-      <li>Rijksoverheid (opleidingsvereisten).</li>
-      <li>Advocatenkantoren (salarisinzichten).</li>
+      <li>Data CBS, arbeidsmarktstatistieken.</li>
+      <li>UWV-rapporten, kansrijke beroepen.</li>
+      <li>Orde van Advocaten, leden en instroom.</li>
+      <li>Rijksoverheid, opleidingsvereisten.</li>
+      <li>Advocatenkantoren, salarisinzichten.</li>
     </ul>
-    <p>Analyse op middelbare scholier-niveau: belangrijke begrippen uitgelegd, geen vakjargon zonder toelichting.</p>
+    <p>Analyse gericht op middelbare scholier-niveau: begrippen uitgelegd zonder vakjargon.</p>
   </section>
 
   <section class="sources">
@@ -121,13 +130,13 @@
       <li>[2] CBS, Werkzame beroepsbevolking & vacatures 2024.</li>
       <li>[3] CBS, Deelname 55–65-jarige vrouwen 2013–2024.</li>
       <li>[4] CBS, Werkloosheid Q1 2025.</li>
-      <li>[5] Orde van Advocaten, Ledenstatistiek 2025.</li>
-      <li>[6] Orde van Advocaten, Instroom & Kantorenrapport 2024.</li>
-      <li>[7] UWV, Kansrijke Beroepen 2025–2027.</li>
-      <li>[8] Rijksoverheid, Opleiding tot advocaat.</li>
+      <li>[5] Orde van Advocaten, ledenstatistiek 2025.</li>
+      <li>[6] Orde van Advocaten, instroom & kantorenrapport 2024.</li>
+      <li>[7] UWV, kansrijke beroepen 2025–2027.</li>
+      <li>[8] Rijksoverheid, opleiding tot advocaat.</li>
       <li>[9] Advocaat-bedrijfsgegevens 2024 (Topkantoren).</li>
-      <li>[10] Sociale Advocatuur, Beloningsonderzoek 2024.</li>
-      <li>[11] Orde van Advocaten, Lidmaatschap & Organisatie.</li>
+      <li>[10] Sociale Advocatuur, beloningsonderzoek 2024.</li>
+      <li>[11] Orde van Advocaten, lidmaatschap & organisatie.</li>
     </ol>
   </section>
 
