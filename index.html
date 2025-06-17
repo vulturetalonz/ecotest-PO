@@ -22,6 +22,13 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     h2 {
       color: #003366;
@@ -40,6 +47,7 @@
       justify-content: center;
       color: #666;
       border-radius: 10px;
+      margin: 1rem 0;
     }
     footer {
       text-align: center;
@@ -47,6 +55,15 @@
       background-color: #003366;
       color: white;
       margin-top: 2rem;
+    }
+    .sources {
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ddd;
+    }
+    .sources li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -56,51 +73,62 @@
     <p>Door: [Jouw Naam]</p>
   </header>
 
-  <section>
+  <section id="algemeen">
     <h2>1. Huidige situatie op de arbeidsmarkt in Nederland</h2>
-    <p>
-      De <strong>beroepsbevolking</strong> bestaat uit alle mensen tussen de 15 en 75 jaar die kunnen en willen werken. In Nederland is deze groep in de afgelopen jaren gegroeid, mede door de vergrijzing en migratie.
-    </p>
-    <p>
-      De <strong>participatiegraad</strong> geeft aan hoeveel procent van de beroepsgeschikte bevolking daadwerkelijk werkt of werk zoekt. Deze is gestegen tot boven de 70%.
-    </p>
-    <p>
-      De <strong>werkloosheid</strong> is historisch laag (rond de 3-4%) door economische groei en krapte op de arbeidsmarkt.
-    </p>
-    <div class="placeholder">[Placeholder afbeelding arbeidsmarkt]</div>
-    <p>De oorzaken van deze trends zijn o.a. vergrijzing, economische groei en technologische ontwikkelingen.</p>
+    <p>In Q1 2025 telt de beroepsbevolking ongeveer 10,2 miljoen mensen tussen 15 en 75 jaar, met een bruto participatiegraad van 76,0%<sup>[1]</sup>. De werkzame beroepsbevolking groeide in 2024 met 0,6% naar 9,8 miljoen <sup>[2]</sup>. Vrouwen en ouderen nemen steeds vaker deel: het aandeel 55–65-jarige vrouwen steeg van 49% in 2013 naar 69% in 2024<sup>[3]</sup>.</p>
+    <p>De werkloosheid ligt rond de 3,8% (390 duizend personen in Q1 2025)<sup>[4]</sup>. Na een piek tijdens de coronajaren is werkloosheid gedaald maar recent licht gestegen; 84% van de werklozen is kortdurend werkloos (<1 jaar)<sup>[4]</sup>. Er zijn meer vacatures dan werklozen, wat wijst op een krappe arbeidsmarkt<strong>†</strong><sup>[2]</sup>.</p>
+    <div class="placeholder">[Grafiek: Ontwikkeling werkloosheid]</div>
   </section>
 
-  <section>
-    <h2>2. Arbeidsmarkt voor toekomstige advocaten</h2>
-    <p>
-      De werkloosheid onder afgestudeerde juristen is relatief laag. Wel is er veel concurrentie in de top van de advocatuur.
-    </p>
-    <p>
-      Om advocaat te worden is een universitaire studie rechten vereist, gevolgd door de Beroepsopleiding Advocaten.
-    </p>
-    <p>
-      Arbeidsvoorwaarden zijn goed: een startsalaris ligt rond de €2.800 - €3.200, met doorgroeimogelijkheden.
-    </p>
-    <p>
-      Flexibilisering is beperkt, veelal vaste dienstverbanden. De <strong>organisatiegraad</strong> (aansluiting bij vakbonden) is laag in deze sector.
-    </p>
-    <div class="placeholder">[Placeholder afbeelding advocatuur]</div>
+  <section id="advocaat">
+    <h2>2. Arbeidsmarkt voor (toekomstige) advocaten</h2>
+    <p>Aantal advocaten steeg van 18.513 in 2024 naar 18.723 in 2025 (+1%)<sup>[5]</sup>. Jaarlijks treden circa 1.081 nieuwe advocaten toe<sup>[6]</sup>. Advocatenkantoren daalden licht naar 5.490, waarvan 17% solo-kantoren<sup>[6]</sup>. UWV rekent advocaten tot de kansrijke beroepen vanwege veel vacatures<sup>[7]</sup>.</p>
+    <p>Opleiding: WO-bachelor en -master Rechtsgeleerdheid, gevolgd door 3 jaar stage en 2 jaar Beroepsopleiding Advocaten<sup>[8]</sup>.</p>
+    <p>Beloning: start-salaris bij topkantoren €4.700–5.000, ervaren advocaat tot €10.800<sup>[9]</sup>; sociale advocaten via puntensysteem ~€6.907<sup>[10]</sup>.</p>
+    <p>Flexibiliteit: veel zzp’ers en freelance juristen; thuiswerken is gebruikelijk. Organisatiegraad is laag; geen eigen vakbond, wel verplichte Orde van Advocaten-lidmaatschap<sup>[11]</sup>.</p>
+    <div class="placeholder">[Afbeelding: Advocatenpraktijk]</div>
   </section>
 
-  <section>
+  <section id="toekomst">
     <h2>3. Verwachte situatie over 5 jaar</h2>
-    <p>
-      De verwachting is dat de arbeidsmarkt voor juristen <strong>krappper</strong> wordt, vooral door toenemende vraag naar juridische ondersteuning bij complexe regelgeving en digitalisering.
-    </p>
-    <p>
-      De kans op een baan als advocaat wordt daardoor <strong>groter</strong>, vooral voor specialisaties zoals IT-recht en ondernemingsrecht.
-    </p>
-    <div class="placeholder">[Placeholder afbeelding toekomst]</div>
+    <p>UWV verwacht tot 2027 veel vacatures en tekort aan juristen door vergrijzing en vervangingsvraag<sup>[7]</sup>. Legal tech verandert het werk, maar vervangt niet alle taken.</p>
+    <p>Het aantal afgestudeerde advocaten blijft groeien (~1.000 per jaar), maar vraag blijft groter door nieuwe regelgeving en pensioneringen. Hierdoor blijft de arbeidsmarkt krap, wat goed nieuws is voor werkzoekende juristen, al neemt concurrentie toe<sup>[7][6]</sup>.</p>
+    <div class="placeholder">[Illustratie: Juridische toekomst]</div>
+  </section>
+
+  <section class="sources">
+    <h3>Bronnen</h3>
+    <ol>
+      <li>[1] CBS, Arbeidsdeelname Q1 2025.</li>
+      <li>[2] CBS, Werkzame beroepsbevolking 2024.</li>
+      <li>[3] CBS, Deelname 55–65-jarige vrouwen 2013–2024.</li>
+      <li>[4] CBS, Werkloosheid Q1 2025.</li>
+      <li>[5] Nederlandse Orde van Advocaten, ledenaantallen 2024.</li>
+      <li>[6] Nederlandse Orde van Advocaten, instroom & kantoren 2025.</li>
+      <li>[7] UWV, Kansrijke beroepen 2025–2027.</li>
+      <li>[8] Rijksoverheid, Opleiding tot advocaat.</li>
+      <li>[9] Advocaat-bedrijfsgegevens 2024 (Topkantoren).</li>
+      <li>[10] Sociale Advocatuur, Beloningsonderzoek 2024.</li>
+      <li>[11] Orde van Advocaten, Lidmaatschap & Organisatie.</li>
+    </ol>
   </section>
 
   <footer>
     <p>PO Economie - Ingeleverd via ELO - Eigen werk</p>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+      sections.forEach(sec => observer.observe(sec));
+    });
+  </script>
 </body>
 </html>
