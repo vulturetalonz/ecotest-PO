@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arbeidsmarkt en Advocatuur</title>
   <style>
-    /* Algemeen */
     html { scroll-behavior: smooth; }
     body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background-color: #f9f9f9; color: #333; }
     a { text-decoration: none; }
@@ -15,9 +14,7 @@
       position: relative;
       background: url('https://img.freepik.com/free-photo/gavel-with-books-old-wooden-desk_20989098.jpg') center/cover;
       height: 80vh;
-      filter: brightness(60%) grayscale(20%);
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
       color: #fff;
@@ -27,7 +24,7 @@
       content: '';
       position: absolute;
       inset: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.5);
     }
     .hero-content {
       position: relative;
@@ -35,25 +32,30 @@
       max-width: 800px;
       padding: 0 1rem;
     }
-    .hero h1 { font-size: 3rem; margin: 0.5rem 0; }
-    .hero p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .hero h1 { font-size: 3.5rem; margin: 0.5rem 0; }
+    .hero p { font-size: 1.3rem; margin-bottom: 1.5rem; }
     .hero .buttons a {
       display: inline-block;
       margin: 0 0.5rem;
       padding: 0.8rem 1.5rem;
-      border-radius: 5px;
+      border-radius: 4px;
       font-weight: bold;
-      background: #d4af37;
+      background: #ffc20e;
       color: #003366;
-      transition: background 0.3s;
+      border: 2px solid #ffc20e;
+      transition: background 0.3s, color 0.3s;
     }
     .hero .buttons a.secondary {
+      background: transparent;
+      color: #fff;
+      border-color: #fff;
+    }
+    .hero .buttons a:hover {
       background: #fff;
       color: #003366;
     }
-    .hero .buttons a:hover { background: #b3922d; }
 
-    /* Nav boven hero */
+    /* Nav */
     nav {
       position: absolute;
       top: 0; width: 100%;
@@ -67,28 +69,22 @@
       color: #fff;
       font-weight: 600;
       opacity: 0;
-      animation: fadeInNav 0.8s forwards;
+      animation: fadeInNav 0.6s forwards;
     }
-    @keyframes fadeInNav {
-      from { opacity: 0; transform: translateY(-10px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes fadeInNav { from { opacity: 0; transform: translateY(-10px);} to { opacity: 1; transform: translateY(0);} }
 
     /* Iconen sectie */
     .icons {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
       gap: 2rem;
       max-width: 900px;
       margin: 3rem auto;
       text-align: center;
       padding: 0 1rem;
     }
-    .icon-box svg {
-      width: 50px;
-      height: 50px;
-      fill: #d4af37;
-      margin-bottom: 0.5rem;
-    }
-    .icon-box h4 { margin: 0.5rem 0 0; font-size: 1.1rem; }
+    .icon-box svg { width: 48px; height: 48px; fill: #ffc20e; margin-bottom: 0.5rem; }
+    .icon-box h4 { margin: 0.5rem 0 0; font-size: 1rem; color: #003366; }
 
     /* Secties */
     section { padding: 2rem 1rem; max-width: 900px; margin: auto; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
@@ -97,6 +93,9 @@
     p, ul { line-height: 1.6; }
     ul { margin: 1rem 0; }
     .stat { background: #f0f8ff; padding: 1rem; margin: 1rem 0; border-left: 4px solid #003366; }
+    figure { margin: 2rem 0; text-align: center; }
+    figure img { max-width: 100%; height: auto; border-radius: 8px; }
+    figcaption { font-size: 0.9rem; color: #666; margin-top: 0.5rem; }
 
     /* Footer */
     footer { text-align: center; padding: 1rem; background-color: #003366; color: white; margin-top: 2rem; }
@@ -112,7 +111,7 @@
 
   <header class="hero">
     <div class="hero-content">
-      <h1>Arbeidsmarkt & Advocatuur</h1>
+      <h1>Praktische Opdracht: Arbeidsmarkt & Advocatuur</h1>
       <p>Actuele cijfers en trends rondom het juridische werkveld in Nederland</p>
       <div class="buttons">
         <a href="#algemeen">Lees Meer</a>
@@ -122,26 +121,108 @@
   </header>
 
   <div class="icons">
-    <div class="icon-box">
-      <svg viewBox="0 0 64 64"><path d="M32 2 L42 22 62 24 46 38 50 58 32 48 14 58 18 38 2 24 22 22 Z"/></svg>
-      <h4>Loud Victories</h4>
-    </div>
-    <div class="icon-box">
-      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30"/></svg>
-      <h4>Professionalism</h4>
-    </div>
-    <div class="icon-box">
-      <svg viewBox="0 0 64 64"><rect x="12" y="12" width="40" height="40"/></svg>
-      <h4>Quality</h4>
-    </div>
-    <div class="icon-box">
-      <svg viewBox="0 0 64 64"><path d="M16 48 L48 16 M48 48 L16 16"/></svg>
-      <h4>Consulting</h4>
-    </div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 2a30 30 0 1 0 0 60 30 30 0 0 0 0-60zm0 6a12 12 0 1 1 0 24 12 12 0 0 1 0-24zm0 36c-8 0-14 4-18 10 4 2 8 4 18 4s14-2 18-4c-4-6-10-10-18-10z"/></svg><h4>Beroepsbevolking</h4></div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 4v28l20 12 4-6-20-12V4zM28 60a4 4 0 1 1 8 0h-8z"/></svg><h4>Participatie</h4></div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 6a26 26 0 1 0 0 52 26 26 0 0 0 0-52zm0 8a18 18 0 1 1 0 36 18 18 0 0 1 0-36zm0 8a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg><h4>Werkloosheid</h4></div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M4 16l28-12 28 12-28 12-28-12zm4 8v24l24 8 24-8V24l-24 8-24-8z"/></svg><h4>Scholing</h4></div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 4a28 28 0 1 0 0 56 28 28 0 0 0 0-56zm0 8v36M24 20h16M24 36h16"/></svg><h4>Salaris</h4></div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M16 32h32M32 16v32M22 22l20 20M42 22L22 42"/></svg><h4>Flexibiliteit</h4></div>
+    <div class="icon-box"><svg viewBox="0 0 64 64"><circle cx="20" cy="24" r="8"/><circle cx="44" cy="24" r="8"/><rect x="16" y="36" width="32" height="20" rx="4"/></svg><h4>Organisatie</h4></div>
   </div>
 
-  <!-- Bestaande secties blijven ongewijzigd -->
-  ...
+  <section id="algemeen">
+    <h2>1. Huidige situatie arbeidsmarkt Nederland</h2>
+    <div class="stat"><strong>10,2 miljoen</strong> personen in de beroepsbevolking (15–75 jaar, Q1 2025)<sup>[1]</sup> | <strong>76,0%</strong> bruto participatiegraad<sup>[1]</sup></div>
+    <h3>Begrippen uitgelegd</h3>
+    <ul>
+      <li><strong>Beroepsbevolking</strong>: alle mensen van 15 tot 75 jaar die kunnen en willen werken.</li>
+      <li><strong>Participatiegraad</strong>: percentage van de beroepsbevolking dat werkt of actief zoekt.</li>
+      <li><strong>Werkloosheid</strong>: percentage zonder werk, maar wel beschikbaar en zoekend.</li>
+    </ul>
+    <p>De beroepsbevolking groeide door vergrijzing, migratie en hogere vrouwenparticipatie.</p>
+    <img src="https://th.bing.com/th/id/OIP.jRlPMzH2xVI33e3K550gpAHaEe?r=0&rs=1&pid=ImgDetMain" alt="Cijfers arbeidsmarkt Nederland">
+    <h3>Participatiegraad</h3>
+    <p>Netto participatie 72,9% (Q1 2025), groei vooral onder vrouwen<sup>[4]</sup>.</p>
+    <h3>Werkloosheid en vacatures</h3>
+    <p>Werkloosheid 3,8% (390.000), vacatures 310.000 (Q4 2024), markt is krap.</p>
+    <figure><img src="https://th.bing.com/th/id/OIP.PMnVN5mcxNKabXjcPnKQkgHaEK?r=0&rs=1&pid=ImgDetMain&cb=idpwebpc2" alt="Vacatures per 100 werklozen"><figcaption>Vacatures per 100 werklozen (2008–2022), CBS.</figcaption></figure>
+  </section>
+
+  <section id="advocaat">
+    <h2>2. Huidige situatie op de arbeidsmarkt voor toekomstige advocaten</h2>
+    <div class="stat"><strong>18.723</strong> advocaten (2025) | werkloosheid <strong>1,2%</strong><sup>[12]</sup></div>
+    <h3>Ontwikkeling werkloosheid en banen</h3>
+    <p>Werkloosheid juristen 1,2%, jaarlijks ~5.500 vacatures voor juridische functies<sup>[7]</sup>, vacaturegraad 1,8.</p>
+    <h3>Vereiste scholing</h3>
+    <ul>
+      <li>WO-bachelor Rechtsgeleerdheid (3 jaar).</li>
+      <li>WO-master Civiel Effect/Rechtsgeleerdheid (1–2 jaar).</li>
+      <li>Stage advocaat-stagiair (≥3 jaar).</li>
+      <li>Beroepsopleiding Advocaten (2 jaar).</li>
+    </ul>
+    <h3>Arbeidsvoorwaarden</h3>
+    <ul>
+      <li>Topkantoren: start €4.700–5.000; 7e-jaars €9.000–10.800<sup>[9]</sup>.</li>
+      <li>Middelgrote: start €3.500–4.200; 7e-jaars €6.000–7.500.</li>
+      <li>Sociale advocatuur: ~€6.907 p.m.<sup>[10]</sup>.</li>
+    </ul>
+    <h3>Flexibiliteit en werkvormen</h3>
+    <ul>
+      <li>20% zzp/freelance.</li>
+      <li>85% hybride werk.</li>
+      <li>Tijdelijke contracten voor starters.</li>
+    </ul>
+    <h3>Organisatiegraad</h3>
+    <ul>
+      <li>Orde-lidmaatschap verplicht (100%).</li>
+      <li>~5% vakbondsdeelname (FNV/CNV).</li>
+    </ul>
+    <h3>Conclusie</h3>
+    <p>Door krapte en veel vacatures relatief makkelijk werk te vinden, maar concurrentie door instroom vraagt om specialisatie en ervaring.</p>
+  </section>
+
+  <section id="toekomst">
+    <h2>3. Verwachte situatie over 5 jaar</h2>
+    <ul>
+      <li>Vergrijzing en vervangingsvraag houden krapte in stand<sup>[7]</sup>.</li>
+      <li>Legal tech vergroot vraag naar specialisten.</li>
+      <li>~1.000 nieuwe advocaten per jaar vs. ~1.100 pensioneringen.</li>
+    </ul>
+    <div class="stat"><strong>Kansrijke arbeidsmarkt</strong>: specialisatie en soft skills steeds belangrijker.</div>
+  </section>
+
+  <section id="methodologie">
+    <h2>4. Methodologie</h2>
+    <ul>
+      <li>CBS: arbeidsmarktstatistieken.</li>
+      <li>UWV: kansrijke beroepen.</li>
+      <li>Orde van Advocaten: leden en instroom.</li>
+      <li>Rijksoverheid: opleidingsvereisten.</li>
+    </ul>
+    <p>Toegankelijke uitleg voor middelbare scholier-niveau, zonder jargon.</p>
+  </section>
+
+  <section class="sources">
+    <h3>Bronnen</h3>
+    <ol>
+      <li>[1] CBS, Arbeidsdeelname Q1 2025.</li>
+      <li>[2] CBS, Werkzame beroepsbevolking & vacatures 2024.</li>
+      <li>[3] CBS, Deelname 55–65-jarige vrouwen 2013–2024.</li>
+      <li>[4] CBS, Werkloosheid Q1 2025.</li>
+      <li>[5] Orde van Advocaten, Ledenstatistiek 2025.</li>
+      <li>[6] Orde van Advocaten, Instroom & pensioenrapport 2024.</li>
+      <li>[7] UWV, Kansrijke beroepen 2025–2027.</li>
+      <li>[8] Rijksoverheid, Opleiding tot advocaat.</li>
+      <li>[9] Advocaat-bedrijfsgegevens 2024 (Topkantoren).</li>
+      <li>[10] Sociale Advocatuur, Beloningsonderzoek 2024.</li>
+      <li>[11] Orde van Advocaten, Lidmaatschap & organisatie.</li>
+      <li>[12] Schatting, Juridische arbeidsmarktanalyse.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p>PO Economie - Ingeleverd via ELO - Eigen werk</p>
+  </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
