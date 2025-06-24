@@ -12,7 +12,7 @@
     /* Hero */
     .hero {
       position: relative;
-      background: url('https://img.freepik.com/free-photo/gavel-with-books-old-wooden-desk_20989098.jpg') center/cover;
+      background: url('https://cdn.pixabay.com/photo/2016/07/11/11/10/law-1509436_1280.jpg') center/cover;
       height: 80vh;
       display: flex;
       justify-content: center;
@@ -41,7 +41,7 @@
       border-radius: 4px;
       font-weight: bold;
       background: #ffc20e;
-      color: #003366;
+      color: #5b3413;
       border: 2px solid #ffc20e;
       transition: background 0.3s, color 0.3s;
     }
@@ -52,7 +52,7 @@
     }
     .hero .buttons a:hover {
       background: #fff;
-      color: #003366;
+      color: #5b3413;
     }
 
     /* Nav */
@@ -83,22 +83,22 @@
       text-align: center;
       padding: 0 1rem;
     }
-    .icon-box svg { width: 48px; height: 48px; fill: #ffc20e; margin-bottom: 0.5rem; }
-    .icon-box h4 { margin: 0.5rem 0 0; font-size: 1rem; color: #003366; }
+    .icon-box svg { width: 48px; height: 48px; fill: #d4af37; margin-bottom: 0.5rem; }
+    .icon-box h4 { margin: 0.5rem 0 0; font-size: 1rem; color: #5b3413; }
 
     /* Secties */
     section { padding: 2rem 1rem; max-width: 900px; margin: auto; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     section.visible { opacity: 1; transform: translateY(0); }
-    h2 { color: #003366; margin-top: 2rem; }
+    h2 { color: #5b3413; margin-top: 2rem; }
     p, ul { line-height: 1.6; }
     ul { margin: 1rem 0; }
-    .stat { background: #f0f8ff; padding: 1rem; margin: 1rem 0; border-left: 4px solid #003366; }
+    .stat { background: #fff7e6; padding: 1rem; margin: 1rem 0; border-left: 4px solid #b8860b; }
     figure { margin: 2rem 0; text-align: center; }
     figure img { max-width: 100%; height: auto; border-radius: 8px; }
     figcaption { font-size: 0.9rem; color: #666; margin-top: 0.5rem; }
 
     /* Footer */
-    footer { text-align: center; padding: 1rem; background-color: #003366; color: white; margin-top: 2rem; }
+    footer { text-align: center; padding: 1rem; background-color: #5b3413; color: white; margin-top: 2rem; }
   </style>
 </head>
 <body>
@@ -121,15 +121,44 @@
   </header>
 
   <div class="icons">
-    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 2a30 30 0 1 0 0 60 30 30 0 0 0 0-60zm0 6a12 12 0 1 1 0 24 12 12 0 0 1 0-24zm0 36c-8 0-14 4-18 10 4 2 8 4 18 4s14-2 18-4c-4-6-10-10-18-10z"/></svg><h4>Beroepsbevolking</h4></div>
-    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 4v28l20 12 4-6-20-12V4zM28 60a4 4 0 1 1 8 0h-8z"/></svg><h4>Participatie</h4></div>
-    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 6a26 26 0 1 0 0 52 26 26 0 0 0 0-52zm0 8a18 18 0 1 1 0 36 18 18 0 0 1 0-36zm0 8a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/></svg><h4>Werkloosheid</h4></div>
-    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M4 16l28-12 28 12-28 12-28-12zm4 8v24l24 8 24-8V24l-24 8-24-8z"/></svg><h4>Scholing</h4></div>
-    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M32 4a28 28 0 1 0 0 56 28 28 0 0 0 0-56zm0 8v36M24 20h16M24 36h16"/></svg><h4>Salaris</h4></div>
-    <div class="icon-box"><svg viewBox="0 0 64 64"><path d="M16 32h32M32 16v32M22 22l20 20M42 22L22 42"/></svg><h4>Flexibiliteit</h4></div>
-    <div class="icon-box"><svg viewBox="0 0 64 64"><circle cx="20" cy="24" r="8"/><circle cx="44" cy="24" r="8"/><rect x="16" y="36" width="32" height="20" rx="4"/></svg><h4>Organisatie</h4></div>
+    <div class="icon-box">
+      <!-- Groep mensen -->
+      <svg viewBox="0 0 64 64"><path d="M20 32a6 6 0 1 0 0-12 6 6 0 0 0 0 12zm24 0a6 6 0 1 0 0-12 6 6 0 0 0 0 12z"/><path d="M8 52c0-8 8-12 16-12s16 4 16 12v4H8v-4zm24 0c0-6 6-8 12-8s12 2 12 8v4H32v-4z"/></svg>
+      <h4>Beroepsbevolking</h4>
+    </div>
+    <div class="icon-box">
+      <!-- Opgaande grafiek -->
+      <svg viewBox="0 0 64 64"><path d="M10 54h44v4H10v-4z"/><rect x="16" y="34" width="8" height="20"/><rect x="32" y="24" width="8" height="30"/><rect x="48" y="14" width="8" height="40"/></svg>
+      <h4>Participatie</h4>
+    </div>
+    <div class="icon-box">
+      <!-- Pictogram werkloosheid -->
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><path d="M32 20v24M24 32h16" stroke="#624214" stroke-width="4"/></svg>
+      <h4>Werkloosheid</h4>
+    </div>
+    <div class="icon-box">
+      <!-- Student met diploma -->
+      <svg viewBox="0 0 64 64"><path d="M32 12l20 8-20 8-20-8 20-8z"/><path d="M12 28v20l20 8 20-8V28"/><path d="M32 36v12" stroke="#624214" stroke-width="4"/></svg>
+      <h4>Scholing</h4>
+    </div>
+    <div class="icon-box">
+      <!-- Euro teken -->
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="20"/><text x="32" y="40" font-size="32" font-weight="bold" text-anchor="middle" fill="#624214">€</text></svg>
+      <h4>Salaris</h4>
+    </div>
+    <div class="icon-box">
+      <!-- Cirkelpijlen -->
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="16" fill="none" stroke="#d4af37" stroke-width="4"/><path d="M48 32a16 16 0 0 0-16-16" fill="none" stroke="#d4af37" stroke-width="4"/><path d="M48 32l-4-4 4-4" fill="#d4af37"/></svg>
+      <h4>Flexibiliteit</h4>
+    </div>
+    <div class="icon-box">
+      <!-- Netwerk -->
+      <svg viewBox="0 0 64 64"><circle cx="32" cy="16" r="6"/><circle cx="16" cy="48" r="6"/><circle cx="48" cy="48" r="6"/><path d="M32 22v18M32 40H16M32 40H48" stroke="#624214" stroke-width="4"/></svg>
+      <h4>Organisatie</h4>
+    </div>
   </div>
 
+  <!-- Inhoud secties -->
   <section id="algemeen">
     <h2>1. Huidige situatie arbeidsmarkt Nederland</h2>
     <div class="stat"><strong>10,2 miljoen</strong> personen in de beroepsbevolking (15–75 jaar, Q1 2025)<sup>[1]</sup> | <strong>76,0%</strong> bruto participatiegraad<sup>[1]</sup></div>
@@ -220,8 +249,8 @@
     </ol>
   </section>
 
-  <footer> 
-    <p>PO Economie - Ingeleverd via ELO - Eigen werk</p>
+  <footer>
+    <p>PO ECONOMIE - YASMAE STRATING</p>
   </footer>
 
   <script>
@@ -233,5 +262,3 @@
       sections.forEach(sec => observer.observe(sec));
     });
   </script>
-</body>
-</html>
